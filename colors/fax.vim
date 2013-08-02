@@ -19,8 +19,3 @@ highlight DiffDelete term=reverse cterm=bold ctermbg=darkred   ctermfg=black
 
 " Underline the cursor line
 highlight CursorLine cterm=underline
-
-" White space and 80 char mark
-highlight OverLength  ctermbg=red
-highlight ColorColumn ctermbg=darkgray
-highlight ExtraWhitespace ctermbg=red guibg=red

@@ -89,6 +89,9 @@ autocmd BufWinLeave *.js mkview
 autocmd BufWinEnter *.js silent loadview
 
 " Show extra which space and over 80
+highlight OverLength  ctermbg=red
+highlight ColorColumn ctermbg=darkgray
+highlight ExtraWhitespace ctermbg=red guibg=red
 match OverLength /\%80v.\+/
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
