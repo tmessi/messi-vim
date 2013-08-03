@@ -2,6 +2,35 @@ scriptencoding utf-8
 set encoding=utf-8
 
 "------------------------------------------------
+" Color settings
+"------------------------------------------------
+set background=dark
+
+" Basic settings
+highlight Normal  guifg=Green guibg=Black
+highlight LineNr  term=bold cterm=NONE ctermfg=gray ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+highlight Folded  ctermfg=59    ctermbg=NONE
+
+" Pmenu for supertab etc
+highlight Pmenu      guifg=green guibg=darkgray gui=NONE ctermfg=green ctermbg=darkgray cterm=NONE
+highlight PmenuSel   guifg=green guibg=black    gui=NONE ctermfg=green ctermbg=black    cterm=NONE
+
+" Better diff colors
+highlight DiffAdd    term=reverse cterm=bold ctermbg=darkgreen ctermfg=black
+highlight DiffChange term=reverse cterm=bold ctermbg=darkblue  ctermfg=black
+highlight DiffText   term=reverse cterm=bold ctermbg=lightgray ctermfg=black
+highlight DiffDelete term=reverse cterm=bold ctermbg=darkred   ctermfg=black
+
+" Underline the cursor line
+highlight CursorLine cterm=underline
+
+" Extra white space
+highlight OverLength  ctermbg=red
+highlight ColorColumn ctermbg=darkgray
+highlight ExtraWhitespace ctermbg=red guibg=red
+
+
+"------------------------------------------------
 " Basic settings
 "------------------------------------------------
 let mapleader="'"      " The leader key
@@ -36,7 +65,6 @@ set cursorline         " Show a line for the cursor
 set colorcolumn=80     " Show a column at 80 char mark
 set laststatus=2       " Always show status line
 set showmode           " Show the current mode
-
 
 
 "------------------------------------------------
@@ -89,9 +117,6 @@ autocmd BufWinLeave *.js mkview
 autocmd BufWinEnter *.js silent loadview
 
 " Show extra which space and over 80
-highlight OverLength  ctermbg=red
-highlight ColorColumn ctermbg=darkgray
-highlight ExtraWhitespace ctermbg=red guibg=red
 match OverLength /\%80v.\+/
 match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
