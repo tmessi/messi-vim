@@ -37,9 +37,12 @@ let mapleader="'"      " The leader key
 set mouse=a            " Allow mouse
 set nowrap             " No wrapping
 set showmatch          " Show matching brackets when inserted
+set splitbelow         " Default splits to below
+set splitright         " Default vsplits to the right
+set title              " Set title for gvim
 set foldmethod=syntax  " Fold based on syntax
 set t_Co=256           " Force 256 colors
-set nobackup
+set scrolloff=999      " Keep cursor at center
 
 " Tab settings
 set expandtab          " Expand tabs into spaces
@@ -55,6 +58,8 @@ set nosmartindent
 " Search settings
 set hlsearch           " Highlight results
 set incsearch          " Start showing results while typing
+set ignorecase         " Ignore case in searched
+set smartcase          " Use case in search with capitals
 
 " Line number settings
 set relativenumber     " Start with relative numbers
@@ -66,6 +71,21 @@ set colorcolumn=80     " Show a column at 80 char mark
 set laststatus=2       " Always show status line
 set showmode           " Show the current mode
 
+" Tab completion settings
+set wildmode=list:longest     " Complete till longest common string
+set wildignore+=.git,.hg,.svn " Ignore version constrol repos
+set wildignore+=*.pyc         " Ignore python compiled files
+set wildignore+=*.class       " Ignore java compiled files
+set wildignore+=*.swp         " Ignore vim backups
+
+" Backup/Undo settings
+execute "set directory=" . g:vim_home_path . "/swap"
+execute "set backupdir=" . g:vim_home_path . "/backup"
+execute "set undodir=" . g:vim_home_path . "/undo"
+set backup
+set undofile
+set writebackup
+
 
 "------------------------------------------------
 " Plugin settings
@@ -76,6 +96,9 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " NerdTree settings
 let g:nerdtree_tabs_open_on_console_startup = 1
+
+" Synstastic settings
+let g:syntastic_python_checker=['pylint', 'pyflakes']
 
 " Gundo settings
 let g:gundo_preview_bottom = 1
@@ -136,6 +159,15 @@ function! NumberToggle()
         set relativenumber
     endif
 endfunc
+
+" Short cuts for split nav
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-h> <C-w>h
+map <C-l> <C-w>l
+
+" Command to write as root if forgot to open with sudo
+cmap w!! %!sudo tee > /dev/null %
 
 " Key bindings
 map <Space> :nohlsearch<Bar>:echo<CR>
