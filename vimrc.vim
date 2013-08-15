@@ -98,7 +98,7 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 " Synstastic settings
-let g:syntastic_python_checker=['pylint', 'pyflakes']
+let g:syntastic_python_checkers=['pylint', 'pyflakes']
 
 " Gundo settings
 let g:gundo_preview_bottom = 1
