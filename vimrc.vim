@@ -167,6 +167,10 @@ map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
 
+" Easier visual indent
+vnoremap < <gv
+vnoremap > >gv
+
 " Command to write as root if forgot to open with sudo
 cmap w!! %!sudo tee > /dev/null %
 
@@ -182,9 +186,4 @@ nmap <F7> :GundoToggle <CR>
 map <F8> :set expandtab! expandtab?<CR>
 map <F9> :set paste! paste?<CR>
 map <F10> :set cursorline! cursorline?<CR>
-" Bindings for eclim commands
-noremap <silent> <buffer> <leader>i :JavaImport<cr>
-noremap <silent> <buffer> <leader>d :JavaDocSearch -x declarations<cr>
-noremap <silent> <buffer> <leader>p :JavaDocComment<cr>
-noremap <silent> <buffer> <leader>o :JavaImportOrganize<cr>
-noremap <silent> <buffer> <cr> :JavaSearchContext<cr>
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
