@@ -41,6 +41,7 @@ set splitbelow         " Default splits to below
 set splitright         " Default vsplits to the right
 set title              " Set title for gvim
 set foldmethod=syntax  " Fold based on syntax
+set foldlevel=999      " Start with folds open
 set t_Co=256           " Force 256 colors
 set scrolloff=999      " Keep cursor at center
 
