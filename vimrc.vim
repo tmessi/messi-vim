@@ -177,7 +177,7 @@ vnoremap > >gv
 cmap w!! %!sudo tee > /dev/null %
 
 " Key bindings
-map <Space> :nohlsearch<Bar>:echo<CR>
+noremap <silent><leader>/ :nohlsearch<Bar>:echo<CR>
 nnoremap <F2> :call NumberToggle()<cr>
 map <F3> :set wrap! wrap?<CR>
 map <F4> :set hlsearch! hlsearch?<CR>
