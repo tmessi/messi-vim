@@ -7,26 +7,26 @@ set encoding=utf-8
 set background=dark
 
 " Basic settings
-highlight Normal  guifg=Green guibg=Black
-highlight LineNr  term=bold cterm=NONE ctermfg=gray ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
-highlight Folded  ctermfg=59    ctermbg=NONE
+highlight Normal                                                         guifg=Green    guibg=Black
+highlight LineNr     cterm=bold ctermfg=gray  ctermbg=NONE      gui=NONE guifg=DarkGrey guibg=NONE
+highlight Folded                ctermfg=59    ctermbg=NONE
 
 " Pmenu for supertab etc
-highlight Pmenu      guifg=green guibg=darkgray gui=NONE ctermfg=green ctermbg=darkgray cterm=NONE
-highlight PmenuSel   guifg=green guibg=black    gui=NONE ctermfg=green ctermbg=black    cterm=NONE
+highlight Pmenu      cterm=NONE ctermfg=green ctermbg=darkgray  gui=NONE guifg=green guibg=darkgray
+highlight PmenuSel   cterm=NONE ctermfg=green ctermbg=black     gui=NONE guifg=green guibg=black
 
 " Better diff colors
-highlight DiffAdd    term=reverse cterm=bold ctermbg=darkgreen ctermfg=black
-highlight DiffChange term=reverse cterm=bold ctermbg=darkblue  ctermfg=black
-highlight DiffText   term=reverse cterm=bold ctermbg=lightgray ctermfg=black
-highlight DiffDelete term=reverse cterm=bold ctermbg=darkred   ctermfg=black
+highlight DiffAdd    cterm=bold ctermfg=black ctermbg=darkgreen gui=bold guifg=black guibg=darkgreen
+highlight DiffChange cterm=bold ctermfg=black ctermbg=darkblue
+highlight DiffText   cterm=bold ctermfg=black ctermbg=lightgray
+highlight DiffDelete cterm=bold ctermfg=black ctermbg=darkred
 
 " Underline the cursor line
 highlight CursorLine cterm=underline
 
 " Extra white space
-highlight OverLength  ctermbg=red
-highlight ColorColumn ctermbg=darkgray
+highlight OverLength      ctermbg=red
+highlight ColorColumn     ctermbg=darkgray
 highlight ExtraWhitespace ctermbg=red guibg=red
 
 
@@ -74,7 +74,7 @@ set showmode           " Show the current mode
 
 " Tab completion settings
 set wildmode=list:longest     " Complete till longest common string
-set wildignore+=.git,.hg,.svn " Ignore version constrol repos
+set wildignore+=.git,.hg,.svn " Ignore version control repos
 set wildignore+=*.pyc         " Ignore python compiled files
 set wildignore+=*.class       " Ignore java compiled files
 set wildignore+=*.swp         " Ignore vim backups
@@ -152,7 +152,7 @@ autocmd BufWinLeave * call clearmatches()
 
 " Fun with numbers
 autocmd FocusLost * :set number
-autocmd FocusGained * : set relativenumber
+autocmd FocusGained * :set relativenumber
 autocmd InsertEnter * :set number
 autocmd InsertLeave * :set relativenumber
 function! NumberToggle()
