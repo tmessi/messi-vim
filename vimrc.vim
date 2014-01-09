@@ -141,6 +141,10 @@ autocmd BufWinLeave *.java mkview
 autocmd BufWinEnter *.java silent loadview
 autocmd BufWinLeave *.js mkview
 autocmd BufWinEnter *.js silent loadview
+autocmd BufWinLeave *.coffee mkview
+autocmd BufWinEnter *.coffee silent loadview
+autocmd BufWinLeave *.sls mkview
+autocmd BufWinEnter *.sls silent loadview
 
 " Show extra which space and over 80
 match OverLength /\%80v.\+/
