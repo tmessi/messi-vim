@@ -101,7 +101,7 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 " Synstastic settings
 let g:syntastic_python_checkers=['pylint', 'flake8']
 let g:syntastic_python_flake8_args='--config ~/.flake8'
-let g:syntastic_python_pylint_args='--rcfile .pylintrc -f parseable -r n -i y'
+let g:syntastic_python_pylint_args='--rcfile .pylintrc --msg-template="{path}:{line}: [{msg_id}] {msg}" -r n'
 
 " Gundo settings
 let g:gundo_preview_bottom = 1
