@@ -146,6 +146,9 @@ autocmd BufWinEnter *.coffee silent loadview
 autocmd BufWinLeave *.sls mkview
 autocmd BufWinEnter *.sls silent loadview
 
+" Treat all html as htmldjango
+autocmd BufNewFile,BufRead *.html set filetype=htmldjango
+
 " Show extra which space and over 80
 match OverLength /\%80v.\+/
 match ExtraWhitespace /\s\+$/
