@@ -122,6 +122,8 @@ let g:EclimOpenUrlInVimPatterns =
 command -range -nargs=* Google call eclim#web#SearchEngine('http://www.google.com/search?q=<query>', <q-args>, <line1>, <line2>)
 command -nargs=? Dictionary call eclim#web#WordLookup('http://dictionary.reference.com/search?q=<query>', '<args>')
 
+" Indent Guides
+let g:indent_guides_guide_size = 1
 
 "------------------------------------------------
 " Other settings
