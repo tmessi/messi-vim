@@ -180,10 +180,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-h> <C-w>h
 map <C-l> <C-w>l
-map <C-J> <C-w>J
-map <C-K> <C-w>K
-map <C-H> <C-w>H
-map <C-L> <C-w>L
 
 " Easier visual indent
 vnoremap < <gv
