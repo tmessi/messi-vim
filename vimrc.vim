@@ -150,6 +150,8 @@ autocmd BufWinLeave *.coffee mkview
 autocmd BufWinEnter *.coffee silent loadview
 autocmd BufWinLeave *.sls mkview
 autocmd BufWinEnter *.sls silent loadview
+autocmd BufWinLeave *.rst mkview
+autocmd BufWinEnter *.rst silent loadview
 
 " Treat all html as htmldjango
 autocmd BufNewFile,BufRead *.html set filetype=htmldjango
