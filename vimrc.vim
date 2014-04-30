@@ -202,4 +202,5 @@ nmap <F7> :GundoToggle <CR>
 map <F8> :set expandtab! expandtab?<CR>
 map <F9> :set paste! paste?<CR>
 map <F10> :set cursorline! cursorline?<CR>
+map <F11> :set spell! spell?<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
