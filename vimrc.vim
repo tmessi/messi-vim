@@ -125,8 +125,8 @@ command -nargs=? Dictionary call eclim#web#WordLookup('http://dictionary.referen
 " Indent Guides
 let g:indent_guides_guide_size = 1
 
-" Vim Table Mode
-let g:table_mode_corner_corner = '+'
+" Riv Rst Vim
+let g:riv_ignored_imaps = "<Tab>,<S-Tab>"
 
 "------------------------------------------------
 " Other settings
