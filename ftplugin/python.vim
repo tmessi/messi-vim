@@ -1,4 +1,5 @@
-set foldmethod=indent  " Fold based on indent
+set foldmethod=indent      " Fold based on indent
+set colorcolumn=73,80,160  " Show a column at 73, 80, and 160 char mark
 
 " Add the virtualenv's site-packages to vim path
 if has('python')

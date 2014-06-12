@@ -68,7 +68,7 @@ set numberwidth=3      " Use 3 columns for numbers
 
 " Cursor / visual settings
 set cursorline         " Show a line for the cursor
-set colorcolumn=73,80,160 " Show a column at 73, 80, and 160 char mark
+set colorcolumn=       " Unset colorcolumn
 set laststatus=2       " Always show status line
 set showmode           " Show the current mode
 
