@@ -63,6 +63,7 @@ set ignorecase         " Ignore case in searched
 set smartcase          " Use case in search with capitals
 
 " Line number settings
+set number             " Start with absolute numbers at cursor
 set relativenumber     " Start with relative numbers
 set numberwidth=3      " Use 3 columns for numbers
 
@@ -165,13 +166,14 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " Fun with numbers
-autocmd FocusLost * :set number
+autocmd FocusLost * :set norelativenumber
 autocmd FocusGained * :set relativenumber
-autocmd InsertEnter * :set number
+autocmd InsertEnter * :set norelativenumber
 autocmd InsertLeave * :set relativenumber
 function! NumberToggle()
     if(&relativenumber == 1)
         set number
+        set norelativenumber
     else
         set relativenumber
     endif
