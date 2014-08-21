@@ -103,6 +103,7 @@ let g:nerdtree_tabs_open_on_console_startup = 1
 let g:syntastic_python_checkers=['pylint', 'flake8']
 let g:syntastic_python_flake8_args='--config ~/.flake8'
 let g:syntastic_python_pylint_args='--rcfile .pylintrc --msg-template="{path}:{line}: [{msg_id}] {msg}" -r n'
+let g:syntastic_c_checkers=['make']
 
 " Gundo settings
 let g:gundo_preview_bottom = 1
