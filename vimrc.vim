@@ -99,12 +99,6 @@ let g:SuperTabDefaultCompletionType = "context"
 " NerdTree settings
 let g:nerdtree_tabs_open_on_console_startup = 1
 
-" Synstastic settings
-let g:syntastic_python_checkers=['pylint', 'flake8']
-let g:syntastic_python_flake8_args='--config ~/.flake8'
-let g:syntastic_python_pylint_args='--rcfile .pylintrc --msg-template="{path}:{line}: [{msg_id}] {msg}" -r n'
-let g:syntastic_c_checkers=['make']
-
 " Gundo settings
 let g:gundo_preview_bottom = 1
 let g:gundo_right = 1
@@ -133,24 +127,16 @@ let g:indent_guides_guide_size = 1
 " Auto save and restore views for these files
 autocmd BufWinLeave *.sh mkview
 autocmd BufWinEnter *.sh silent loadview
-autocmd BufWinLeave *.c mkview
-autocmd BufWinEnter *.c silent loadview
 autocmd BufWinLeave *.h mkview
 autocmd BufWinEnter *.h silent loadview
 autocmd BufWinLeave *.h mkview
 autocmd BufWinEnter *.h silent loadview
-autocmd BufWinLeave *.py mkview
-autocmd BufWinEnter *.py silent loadview
-autocmd BufWinLeave *.java mkview
-autocmd BufWinEnter *.java silent loadview
 autocmd BufWinLeave *.js mkview
 autocmd BufWinEnter *.js silent loadview
 autocmd BufWinLeave *.coffee mkview
 autocmd BufWinEnter *.coffee silent loadview
 autocmd BufWinLeave *.sls mkview
 autocmd BufWinEnter *.sls silent loadview
-autocmd BufWinLeave *.rst mkview
-autocmd BufWinEnter *.rst silent loadview
 
 " Treat all html as htmldjango
 autocmd BufNewFile,BufRead *.html set filetype=htmldjango

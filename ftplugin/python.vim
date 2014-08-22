@@ -1,6 +1,15 @@
 set foldmethod=indent      " Fold based on indent
 set colorcolumn=73,80,160  " Show a column at 73, 80, and 160 char mark
 
+" Auto save and restore views for these files
+autocmd BufWinLeave *.py mkview
+autocmd BufWinEnter *.py silent loadview
+
+" Synstastic settings
+let g:syntastic_python_checkers=['pylint', 'flake8']
+let g:syntastic_python_flake8_args='--config ~/.flake8'
+let g:syntastic_python_pylint_args='--rcfile .pylintrc --msg-template="{path}:{line}: [{msg_id}] {msg}" -r n'
+
 " Add the virtualenv's site-packages to vim path
 if has('python')
 python << EOF
