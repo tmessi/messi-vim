@@ -100,19 +100,19 @@ let g:SuperTabDefaultCompletionType = "context"
 let g:nerdtree_tabs_open_on_console_startup = 1
 
 " returns true iff is NERDTree open/active
-function! rc:IsNTOpen()
+function! s:isNTOpen()
   return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
 endfunction
 
 " calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
-function! rc:SyncTree()
-  if &modifiable && rc:IsNTOpen() && strlen(expand('%')) > 0 && !&diff
+function! s:syncTree()
+  if &modifiable && s:isNTOpen() && strlen(expand('%')) > 0 && !&diff
     NERDTreeFind
     wincmd p
   endif
 endfunction
 
-autocmd BufEnter * call rc:SyncTree()
+autocmd BufEnter * call s:syncTree()
 
 " Gundo settings
 let g:gundo_preview_bottom = 1
