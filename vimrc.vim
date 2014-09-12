@@ -208,3 +208,7 @@ map <F9> :set paste! paste?<CR>
 map <F10> :set cursorline! cursorline?<CR>
 map <F11> :set spell! spell?<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+
+noremap <leader>f :NERDTreeFind<CR>
+noremap <leader>n :lnext<CR>
+noremap <leader>p :lprevious<CR>
