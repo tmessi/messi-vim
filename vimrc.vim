@@ -182,7 +182,7 @@ cmap w!! %!sudo tee > /dev/null %
 
 " Cleanup functions
 function! RemoveTrailingWhiteSpace()
-    if !&binary && &filtetype != 'diff'
+    if !&binary && &filetype != 'diff'
         normal mz
         normal Hmy
         :%s/\s\+$//e
