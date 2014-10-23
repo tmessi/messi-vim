@@ -99,21 +99,6 @@ let g:SuperTabDefaultCompletionType = "context"
 " NerdTree settings
 let g:nerdtree_tabs_open_on_console_startup = 1
 
-" returns true iff is NERDTree open/active
-function! s:isNTOpen()
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-
-" calls NERDTreeFind iff NERDTree is active, current window contains a modifiable file, and we're not in vimdiff
-function! s:syncTree()
-  if &modifiable && s:isNTOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
-
-autocmd BufEnter * call s:syncTree()
-
 " Gundo settings
 let g:gundo_preview_bottom = 1
 let g:gundo_right = 1
@@ -194,6 +179,18 @@ vnoremap > >gv
 " Command to write as root if forgot to open with sudo
 cmap w!! %!sudo tee > /dev/null %
 
+
+" Cleanup functions
+function! RemoveTrailingWhiteSpace()
+    if !&binary && &filtetype != 'diff'
+        normal mz
+        normal Hmy
+        :%s/\s\+$//e
+        normal yz<CR>
+        normal `z
+    endif
+endfunction
+
 " Key bindings
 noremap <silent><leader>/ :nohlsearch<Bar>:echo<CR>
 nnoremap <F2> :call NumberToggle()<cr>
@@ -212,3 +209,5 @@ nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 noremap <leader>f :NERDTreeFind<CR>
 noremap <leader>n :lnext<CR>
 noremap <leader>p :lprevious<CR>
+
+noremap <leader>s :RemoveTrailingWhiteSpace<CR>
