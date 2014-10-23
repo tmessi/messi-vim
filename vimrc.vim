@@ -210,4 +210,4 @@ noremap <leader>f :NERDTreeFind<CR>
 noremap <leader>n :lnext<CR>
 noremap <leader>p :lprevious<CR>
 
-noremap <leader>s :RemoveTrailingWhiteSpace<CR>
+noremap <leader>s :call RemoveTrailingWhiteSpace()<CR>
