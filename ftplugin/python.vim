@@ -26,3 +26,4 @@ endif
 
 let @d = 'oimport ipdb; ipdb.set_trace()j^'
 let @m = 'ggO# vim: set et ts=4 sw=4 fileencoding=utf-8:``'
+let @u = 'yypv$r='
