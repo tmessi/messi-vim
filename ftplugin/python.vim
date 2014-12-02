@@ -1,4 +1,3 @@
-# vim: set et ts=4 sw=4 fileencoding=utf-8:
 set foldmethod=indent      " Fold based on indent
 set colorcolumn=73,80,160  " Show a column at 73, 80, and 160 char mark
 
