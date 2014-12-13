@@ -26,3 +26,6 @@ endif
 
 let @d = 'oimport ipdb; ipdb.set_trace()j^'
 let @m = 'ggO# vim: set et ts=4 sw=4 fileencoding=utf-8:``'
+
+" Input current relative filename as a python path
+inoremap \fn <C-R>=substitute(expand("%:r"), "/", ".", "g")<CR>
