@@ -191,6 +191,14 @@ function! RemoveTrailingWhiteSpace()
     endif
 endfunction
 
+function! JediToggle()
+    if g:jedi#popup_on_dot
+        let g:jedi#popup_on_dot = 0
+    else
+        let g:jedi#popup_on_dot = 1
+    endif
+endfunction
+
 " Key bindings
 noremap <silent><leader>/ :nohlsearch<Bar>:echo<CR>
 nnoremap <F2> :call NumberToggle()<cr>
@@ -211,3 +219,4 @@ noremap <leader>n :lnext<CR>
 noremap <leader>p :lprevious<CR>
 
 noremap <leader>s :call RemoveTrailingWhiteSpace()<CR>
+noremap <leader>c :call JediToggle()<CR>
