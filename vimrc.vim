@@ -93,6 +93,9 @@ set writebackup
 " Plugin settings
 "------------------------------------------------
 
+" Ctrl-P settings
+let g:ctrlp_use_caching=0
+
 " SuperTab settings
 let g:SuperTabDefaultCompletionType = "context"
 
