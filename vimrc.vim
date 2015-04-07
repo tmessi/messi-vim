@@ -6,27 +6,30 @@ set encoding=utf-8
 "------------------------------------------------
 set background=dark
 
+" Custom Tomorrow-Night via shadowfax-chc/vim-tomorrow-theme
+silent! colorscheme Tomorrow-Night
+
 " Basic settings
-highlight Normal                                                         guifg=Green    guibg=Black
-highlight LineNr     cterm=bold ctermfg=gray  ctermbg=NONE      gui=NONE guifg=DarkGrey guibg=NONE
-highlight Folded                ctermfg=59    ctermbg=NONE
+"highlight Normal                                                         guifg=Green    guibg=Black
+"highlight LineNr     cterm=bold ctermfg=gray  ctermbg=NONE      gui=NONE guifg=DarkGrey guibg=NONE
+"highlight Folded                ctermfg=59    ctermbg=NONE
 
 " Pmenu for supertab etc
-highlight Pmenu      cterm=NONE ctermfg=green ctermbg=darkgray  gui=NONE guifg=green guibg=darkgray
-highlight PmenuSel   cterm=NONE ctermfg=green ctermbg=black     gui=NONE guifg=green guibg=black
+"highlight Pmenu      cterm=NONE ctermfg=green ctermbg=darkgray  gui=NONE guifg=green guibg=darkgray
+"highlight PmenuSel   cterm=NONE ctermfg=green ctermbg=black     gui=NONE guifg=green guibg=black
 
 " Better diff colors
-highlight DiffAdd    cterm=bold ctermfg=black ctermbg=darkgreen gui=bold guifg=black guibg=darkgreen
-highlight DiffChange cterm=bold ctermfg=black ctermbg=darkblue
-highlight DiffText   cterm=bold ctermfg=black ctermbg=lightgray
-highlight DiffDelete cterm=bold ctermfg=black ctermbg=darkred
+"highlight DiffAdd    cterm=bold ctermfg=black ctermbg=darkgreen gui=bold guifg=black guibg=darkgreen
+"highlight DiffChange cterm=bold ctermfg=black ctermbg=darkblue
+"highlight DiffText   cterm=bold ctermfg=black ctermbg=lightgray
+"highlight DiffDelete cterm=bold ctermfg=black ctermbg=darkred
 
 " Underline the cursor line
-highlight CursorLine cterm=underline
+"highlight CursorLine cterm=underline
 
 " Extra white space
 highlight OverLength      ctermbg=red
-highlight ColorColumn     ctermbg=darkgray
+"highlight ColorColumn     ctermbg=darkgray
 highlight ExtraWhitespace ctermbg=red guibg=red
 
 
