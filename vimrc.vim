@@ -84,9 +84,9 @@ set wildignore+=*.class       " Ignore java compiled files
 set wildignore+=*.swp         " Ignore vim backups
 
 " Backup/Undo settings
-set directory="~/.vim/swap/"
-set backupdir="~/.vim/backup/"
-set undodir="~/.vim/undo/"
+execute "set directory=" . g:vim_home_path . "/swap//"
+execute "set backupdir=" . g:vim_home_path . "/backup//"
+execute "set undodir=" . g:vim_home_path . "/undo//"
 set backup
 set undofile
 set writebackup
