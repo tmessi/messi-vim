@@ -205,6 +205,8 @@ function! JediToggle()
     endif
 endfunction
 
+autocmd BufNewFile,BufRead *.quicktask setf quicktask
+
 " Key bindings
 noremap <silent><leader>/ :nohlsearch<Bar>:echo<CR>
 nnoremap <F2> :call NumberToggle()<cr>
