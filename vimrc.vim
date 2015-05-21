@@ -127,6 +127,10 @@ command -nargs=? Dictionary call eclim#web#WordLookup('http://dictionary.referen
 " Indent Guides
 let g:indent_guides_guide_size = 1
 
+" Air-line
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'powerlineish'
+
 "------------------------------------------------
 " Other settings
 "------------------------------------------------
