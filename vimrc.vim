@@ -131,6 +131,7 @@ let g:indent_guides_guide_size = 1
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'badwolf'
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
 
 "------------------------------------------------
 " Other settings
