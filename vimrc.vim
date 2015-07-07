@@ -228,6 +228,11 @@ map <F10> :set cursorline! cursorline?<CR>
 map <F11> :set spell! spell?<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
+" Use ag (the_silver_searcher) if available
+if executable('ag')
+    let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
+nmap <leader>a :Ack! <cword><CR>
 noremap <leader>f :NERDTreeFind<CR>
 noremap <leader>n :lnext<CR>
 noremap <leader>p :lprevious<CR>
