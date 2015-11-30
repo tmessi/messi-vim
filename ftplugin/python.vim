@@ -10,6 +10,7 @@ let g:syntastic_python_checkers=['pylint', 'flake8']
 let g:syntastic_python_flake8_args='--config ~/.flake8'
 let g:syntastic_python_pylint_args='--rcfile .pylintrc --msg-template="{path}:{line}: [{msg_id}] {msg}" -r n'
 
+let g:ycm_goto_buffer_command='horizontal-split'
 " YouCompleteMe
 nnoremap <leader>d :YcmCompleter GoTo<CR>
 
