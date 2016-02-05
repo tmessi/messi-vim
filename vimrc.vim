@@ -133,6 +133,9 @@ let g:airline_theme = 'badwolf'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 
+" Jedi
+let g:jedi#completions_enabled = 0
+
 "------------------------------------------------
 " Other settings
 "------------------------------------------------
@@ -155,6 +158,9 @@ autocmd BufNewFile,BufRead *.html set filetype=htmldjango
 
 " Treat all *.md as markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
+
+" Show TagBar if supported file type
+autocmd BufEnter * nested :call tagbar#autoopen(0)
 
 " Show extra which space and over 80
 match OverLength /\%80v.\+/
