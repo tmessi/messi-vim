@@ -160,7 +160,7 @@ autocmd BufNewFile,BufRead *.html set filetype=htmldjango
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
 " Show TagBar if supported file type
-autocmd BufEnter * nested :call tagbar#autoopen(0)
+" autocmd BufEnter * nested :call tagbar#autoopen(0)
 
 " Show extra which space and over 80
 match OverLength /\%80v.\+/
