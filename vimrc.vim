@@ -135,6 +135,7 @@ let g:airline#extensions#tabline#show_buffers = 0
 
 " Jedi
 let g:jedi#completions_enabled = 0
+let g:jedi#smart_auto_mappings = 0
 
 "------------------------------------------------
 " Other settings
