@@ -133,9 +133,10 @@ let g:airline_theme = 'badwolf'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 
-" Jedi
-let g:jedi#completions_enabled = 0
-let g:jedi#smart_auto_mappings = 0
+" Use ag (the_silver_searcher) if available
+if executable('ag')
+    let g:ackprg = 'ag --nogroup --nocolor --column'
+endif
 
 "------------------------------------------------
 " Other settings
@@ -160,8 +161,8 @@ autocmd BufNewFile,BufRead *.html set filetype=htmldjango
 " Treat all *.md as markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
 
-" Show TagBar if supported file type
-" autocmd BufEnter * nested :call tagbar#autoopen(0)
+" Treat .quicktask as quicktask
+autocmd BufNewFile,BufRead *.quicktask setf quicktask
 
 " Show extra which space and over 80
 match OverLength /\%80v.\+/
@@ -199,7 +200,7 @@ vnoremap > >gv
 cmap w!! %!sudo tee > /dev/null %
 
 
-" Cleanup functions
+" Cleanup white space
 function! RemoveTrailingWhiteSpace()
     if !&binary && &filetype != 'diff'
         normal mz
@@ -210,16 +211,6 @@ function! RemoveTrailingWhiteSpace()
     endif
 endfunction
 
-function! JediToggle()
-    if g:jedi#popup_on_dot
-        let g:jedi#popup_on_dot = 0
-    else
-        let g:jedi#popup_on_dot = 1
-    endif
-endfunction
-
-autocmd BufNewFile,BufRead *.quicktask setf quicktask
-
 " Key bindings
 noremap <silent><leader>/ :nohlsearch<Bar>:echo<CR>
 nnoremap <F2> :call NumberToggle()<cr>
@@ -229,20 +220,14 @@ map <F5> :edit <CR>
 map <F6> :edit! <CR>
 nmap <F12> :NERDTreeTabsToggle <CR>
 nmap <F7> :GundoToggle <CR>
-map <F8> :set expandtab! expandtab?<CR>
+map <F8> :TagbarToggle <CR>
 map <F9> :set paste! paste?<CR>
 map <F10> :set cursorline! cursorline?<CR>
 map <F11> :set spell! spell?<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
-" Use ag (the_silver_searcher) if available
-if executable('ag')
-    let g:ackprg = 'ag --nogroup --nocolor --column'
-endif
 nmap <leader>a :Ack! <cword><CR>
 noremap <leader>f :NERDTreeFind<CR>
 noremap <leader>n :lnext<CR>
 noremap <leader>p :lprevious<CR>
-
 noremap <leader>s :call RemoveTrailingWhiteSpace()<CR>
-noremap <leader>c :call JediToggle()<CR>

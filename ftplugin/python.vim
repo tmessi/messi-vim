@@ -10,8 +10,21 @@ let g:syntastic_python_checkers=['pylint', 'flake8']
 let g:syntastic_python_flake8_args='--config ~/.flake8'
 let g:syntastic_python_pylint_args='--rcfile .pylintrc --msg-template="{path}:{line}: [{msg_id}] {msg}" -r n'
 
-let g:ycm_goto_buffer_command='horizontal-split'
+" Jedi
+let g:jedi#completions_enabled = 0
+let g:jedi#smart_auto_mappings = 0
+function! JediToggle()
+    if g:jedi#popup_on_dot
+        let g:jedi#popup_on_dot = 0
+    else
+        let g:jedi#popup_on_dot = 1
+    endif
+endfunction
+noremap <leader>c :call JediToggle()<CR>
+
 " YouCompleteMe
+let g:ycm_goto_buffer_command='vertical-split'
+let g:ycm_autoclose_preview_window_after_completion = 1
 nnoremap <leader>d :YcmCompleter GoTo<CR>
 
 " Add the virtualenv's site-packages to vim path
