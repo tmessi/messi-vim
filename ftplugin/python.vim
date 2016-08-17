@@ -25,10 +25,8 @@ function! JediToggle()
 endfunction
 noremap <leader>c :call JediToggle()<CR>
 
-" YouCompleteMe
-let g:ycm_goto_buffer_command='vertical-split'
-let g:ycm_autoclose_preview_window_after_completion = 1
-nnoremap <leader>d :YcmCompleter GoTo<CR>
+" snips
+let g:ultisnips_python_style = "google"
 
 " Add the virtualenv's site-packages to vim path
 if has('python')
