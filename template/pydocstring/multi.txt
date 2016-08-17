@@ -1,8 +1,9 @@
 """
-{{_indent_}}{{_header_}}
+{{_header_}}
 
 {{_indent_}}Args:
-{{_nested_indent_}}{{_arg_}}:
+{{_nested_indent_}}{{_arg_}} (<type>):
 
 {{_indent_}}Returns:
+{{_nested_indent_}}<type>:
 """
