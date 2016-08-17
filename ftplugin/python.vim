@@ -10,6 +10,9 @@ let g:syntastic_python_checkers=['pylint', 'flake8']
 let g:syntastic_python_flake8_args='--config ~/.flake8'
 let g:syntastic_python_pylint_args='--rcfile .pylintrc --msg-template="{path}:{line}: [{msg_id}] {msg}" -r n'
 
+" Pydocstring
+let g:template_vim_dir='~/.vim/bundle/vim-fax/template/pydocstring'
+
 " Jedi
 let g:jedi#completions_enabled = 0
 let g:jedi#smart_auto_mappings = 0
