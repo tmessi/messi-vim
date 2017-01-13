@@ -162,6 +162,9 @@ let g:UltiSnipsExpandTrigger = "<tab>"
 let g:UltiSnipsJumpForwardTrigger = "<tab>"
 let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
+" terraform
+let g:terraform_fmt_on_save=1
+
 "------------------------------------------------
 " Other settings
 "------------------------------------------------
