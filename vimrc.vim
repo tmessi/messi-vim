@@ -172,6 +172,11 @@ nmap ga <Plug>(EasyAlign)
 " terraform
 let g:terraform_fmt_on_save=1
 
+" hcl fmt
+let g:hcl_fmt_autosave = 1
+let g:tf_fmt_autosave = 0
+let g:nomad_fmt_autosave = 1
+
 "------------------------------------------------
 " Other settings
 "------------------------------------------------
