@@ -14,8 +14,8 @@ let g:syntastic_python_pylint_args='--rcfile .pylintrc --msg-template="{path}:{l
 let g:pydocstring_templates_dir=expand('<sfile>:p:h:h') . '/template/pydocstring/'
 
 " Jedi
-let g:jedi#completions_enabled = 0
-let g:jedi#smart_auto_mappings = 0
+"let g:jedi#completions_enabled = 0
+"let g:jedi#smart_auto_mappings = 0
 function! JediToggle()
     if g:jedi#popup_on_dot
         let g:jedi#popup_on_dot = 0

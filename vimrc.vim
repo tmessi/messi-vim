@@ -147,14 +147,6 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:go_list_type = "quickfix"
 
-" YouCompleteMe
-let g:ycm_goto_buffer_command='vertical-split'
-let g:ycm_autoclose_preview_window_after_completion = 1
-nnoremap <leader>d :YcmCompleter GoTo<CR>
-
-" make YCM compatible with UltiSnips (using supertab)
-let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
 let g:SuperTabDefaultCompletionType = '<C-n>'
 
 " better key bindings for UltiSnipsExpandTrigger
