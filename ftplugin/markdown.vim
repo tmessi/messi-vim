@@ -7,3 +7,5 @@ call SuperTabSetDefaultCompletionType("<c-x>s")
 
 let @u = 'yypv$r='
 let @i = 'yypv$r-'
+
+let g:syntastic_markdown_mdl_args='--ignore-front-matter'
