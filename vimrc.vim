@@ -169,6 +169,9 @@ let g:hcl_fmt_autosave = 1
 let g:tf_fmt_autosave = 0
 let g:nomad_fmt_autosave = 1
 
+" completor
+set completeopt-=longest
+
 "------------------------------------------------
 " Other settings
 "------------------------------------------------
