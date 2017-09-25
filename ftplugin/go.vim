@@ -16,4 +16,4 @@ nmap <Leader>gv <Plug>(go-doc-vertical)
 " Rename
 nmap <Leader>e <Plug>(go-rename)
 
-let g:syntastic_go_checkers = ['go', 'gometalinter', 'govet', 'errcheck']
+let g:syntastic_go_checkers = ['go', 'gometalinter', 'govet']
