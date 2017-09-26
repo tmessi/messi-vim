@@ -16,4 +16,5 @@ nmap <Leader>gv <Plug>(go-doc-vertical)
 " Rename
 nmap <Leader>e <Plug>(go-rename)
 
-let g:syntastic_go_checkers = ['go', 'gometalinter', 'govet']
+let g:syntastic_go_checkers = ['go', 'gometalinter']
+let g:syntastic_go_gometalinter_args='--config ~/.gometalinter'
