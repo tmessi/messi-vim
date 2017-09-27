@@ -173,8 +173,8 @@ let g:nomad_fmt_autosave = 1
 set completeopt-=longest
 
 " sidways
-nnoremap <leader>h :SidewaysLeft<cr>
-nnoremap <leader>l :SidewaysRight<cr>
+nnoremap <c-h> :SidewaysLeft<cr>
+nnoremap <c-l> :SidewaysRight<cr>
 
 "------------------------------------------------
 " Other settings
@@ -223,12 +223,6 @@ function! NumberToggle()
         set relativenumber
     endif
 endfunc
-
-" Short cuts for split nav
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-h> <C-w>h
-map <C-l> <C-w>l
 
 " Easier visual indent
 vnoremap < <gv
