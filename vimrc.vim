@@ -172,6 +172,10 @@ let g:nomad_fmt_autosave = 1
 " completor
 set completeopt-=longest
 
+" sidways
+nnoremap <leader>h :SidewaysLeft<cr>
+nnoremap <leader>l :SidewaysRight<cr>
+
 "------------------------------------------------
 " Other settings
 "------------------------------------------------
