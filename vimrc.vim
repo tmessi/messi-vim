@@ -273,6 +273,7 @@ map <F10> :set cursorline! cursorline?<CR>
 map <F11> :set spell! spell?<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
+nnoremap <leader>m :TagbarOpenAutoClose<CR>
 nmap <leader>a :Ack! <cword><CR>
 noremap <leader>f :NERDTreeFind<CR>
 noremap <leader>n :lnext<CR>
