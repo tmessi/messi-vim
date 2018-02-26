@@ -191,8 +191,11 @@ set completeopt-=longest
 nnoremap <c-h> :SidewaysLeft<cr>
 nnoremap <c-l> :SidewaysRight<cr>
 
+
 " Limelight / Goyo
+let g:limelight_conceal_ctermfg = 240
 let g:limelight_default_coefficient = 0.5
+
 function! s:goyo_enter()
     NERDTreeClose
     Limelight
