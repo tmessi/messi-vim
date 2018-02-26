@@ -102,8 +102,8 @@ let g:ctrlp_use_caching=0
 " SuperTab settings
 let g:SuperTabDefaultCompletionType = "context"
 
-" NerdTree settings
-let g:nerdtree_tabs_open_on_console_startup = 1
+" NERDTree
+let g:NERDTreeQuitOnOpen=1
 
 " Fugitive
 nnoremap <leader>gs :Gstatus<CR>
@@ -265,7 +265,7 @@ map <F3> :set wrap! wrap?<CR>
 map <F4> :set hlsearch! hlsearch?<CR>
 map <F5> :edit <CR>
 map <F6> :edit! <CR>
-nmap <F12> :NERDTreeTabsToggle <CR>
+nmap <F12> :NERDTreeToggle <CR>
 nmap <F7> :GundoToggle <CR>
 map <F8> :TagbarToggle <CR>
 map <F9> :set paste! paste?<CR>
