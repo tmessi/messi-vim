@@ -191,6 +191,20 @@ set completeopt-=longest
 nnoremap <c-h> :SidewaysLeft<cr>
 nnoremap <c-l> :SidewaysRight<cr>
 
+" Limelight / Goyo
+let g:limelight_default_coefficient = 0.5
+function! s:goyo_enter()
+    NERDTreeClose
+    Limelight
+endfunction
+
+function! s:goyo_leave()
+    Limelight!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
+
 "------------------------------------------------
 " Other settings
 "------------------------------------------------
