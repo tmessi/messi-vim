@@ -199,10 +199,12 @@ let g:limelight_default_coefficient = 0.5
 function! s:goyo_enter()
     NERDTreeClose
     Limelight
+    CursorLine!
 endfunction
 
 function! s:goyo_leave()
     Limelight!
+    CursorLine
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
@@ -296,3 +298,4 @@ noremap <leader>f :NERDTreeFind<CR>
 noremap <leader>n :lnext<CR>
 noremap <leader>p :lprevious<CR>
 noremap <leader>s :call RemoveTrailingWhiteSpace()<CR>
+noremap <leader>z :silent! Goyo<CR>
