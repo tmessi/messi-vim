@@ -199,12 +199,12 @@ let g:limelight_default_coefficient = 0.5
 function! s:goyo_enter()
     NERDTreeClose
     Limelight
-    CursorLine!
+    set nocursorline
 endfunction
 
 function! s:goyo_leave()
     Limelight!
-    CursorLine
+    set cursorline
 endfunction
 
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
@@ -245,10 +245,6 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 autocmd BufWinLeave * call clearmatches()
 
 " Fun with numbers
-autocmd FocusLost * :set norelativenumber
-autocmd FocusGained * :set relativenumber
-autocmd InsertEnter * :set norelativenumber
-autocmd InsertLeave * :set relativenumber
 function! NumberToggle()
     if(&relativenumber == 1)
         set number
