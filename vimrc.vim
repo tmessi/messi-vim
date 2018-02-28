@@ -199,11 +199,13 @@ let g:limelight_default_coefficient = 0.5
 function! s:goyo_enter()
     NERDTreeClose
     Limelight
+    SyntasticToggleMode
     set nocursorline
 endfunction
 
 function! s:goyo_leave()
     Limelight!
+    SyntasticToggleMode
     set cursorline
 endfunction
 
