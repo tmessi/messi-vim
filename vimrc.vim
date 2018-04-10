@@ -196,10 +196,12 @@ let g:nomad_fmt_autosave = 1
 " completor
 set completeopt-=longest
 
-" sidways
+" sideways
 nnoremap <c-h> :SidewaysLeft<cr>
 nnoremap <c-l> :SidewaysRight<cr>
 
+" jedi-vim
+let g:jedi#use_splits_not_buffers = "right"
 
 " Limelight / Goyo
 let g:limelight_conceal_ctermfg = 240
