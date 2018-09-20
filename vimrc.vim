@@ -97,7 +97,7 @@ set writebackup
 "------------------------------------------------
 
 " Ctrl-P settings
-let g:ctrlp_use_caching=0
+let g:ctrlp_use_caching=1
 
 " SuperTab settings
 let g:SuperTabDefaultCompletionType = "context"
@@ -126,8 +126,10 @@ let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Easytags
-let g:easytags_suppress_ctags_warning = 1
+" Gutentags
+let g:gutentags_ctags_tagfile=".tags"
+let g:gutentags_ctags_exclude=['*.js', '*.html']
+set tags=".tags"
 
 " Gundo settings
 let g:gundo_preview_bottom = 1
