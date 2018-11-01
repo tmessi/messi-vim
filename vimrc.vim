@@ -128,7 +128,7 @@ let g:syntastic_check_on_wq = 0
 
 " Gutentags
 let g:gutentags_ctags_tagfile=".tags"
-let g:gutentags_ctags_exclude=['*.js', '*.html']
+let g:gutentags_ctags_exclude=['*.js', '*.html', '*.css', '*.json']
 set tags=".tags"
 
 " Gundo settings
