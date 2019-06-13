@@ -229,6 +229,9 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 "------------------------------------------------
 " Other settings
 "------------------------------------------------
+" Resize splits when terminal resizes
+autocmd VimResized * wincmd =
+
 " Auto save and restore views for these files
 autocmd BufWinLeave *.sh mkview
 autocmd BufWinEnter *.sh silent loadview
