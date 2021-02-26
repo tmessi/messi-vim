@@ -8,3 +8,14 @@ let g:syntastic_php_checkers = ['php', 'phpcs', 'phpstan']
 nmap <Leader>ds :PhpactorGotoDefinitionHsplit<CR>
 nmap <Leader>dv :PhpactorGotoDefinitionVsplit<CR>
 nmap <Leader>dt :PhpactorGotoDefinitionTab<CR>
+
+" PHPcbf
+function! PHP_cbf()
+  let save_pos = getpos(".")
+  execute('silent %! phpcbf -q')
+  call setpos('.', save_pos)
+endfunction
+
+:command! PHPcbf call PHP_cbf()
+
+autocmd BufWritePre *.php call PHP_cbf()
