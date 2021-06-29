@@ -6,26 +6,19 @@ set encoding=utf-8
 "------------------------------------------------
 set background=dark
 
-" Custom Tomorrow-Night via shadowfax-chc/vim-tomorrow-theme
-silent! colorscheme Tomorrow-Night
+" Needed to so termguicolors works when $TERM is not xterm.
+" see:
+"   help termguicolors
+"   help xterm-true-color
+let &t_8f = "\<Esc>[38:2:%lu:%lu:%lum"
+let &t_8b = "\<Esc>[48:2:%lu:%lu:%lum"
+set termguicolors
 
-" Basic settings
-"highlight Normal                                                         guifg=Green    guibg=Black
-"highlight LineNr     cterm=bold ctermfg=gray  ctermbg=NONE      gui=NONE guifg=DarkGrey guibg=NONE
-"highlight Folded                ctermfg=59    ctermbg=NONE
+" cleaner looking vertical split separator
+set fillchars+=vert:\▏
 
-" Pmenu for supertab etc
-"highlight Pmenu      cterm=NONE ctermfg=green ctermbg=darkgray  gui=NONE guifg=green guibg=darkgray
-"highlight PmenuSel   cterm=NONE ctermfg=green ctermbg=black     gui=NONE guifg=green guibg=black
-
-" Better diff colors
-"highlight DiffAdd    cterm=bold ctermfg=black ctermbg=darkgreen gui=bold guifg=black guibg=darkgreen
-"highlight DiffChange cterm=bold ctermfg=black ctermbg=darkblue
-"highlight DiffText   cterm=bold ctermfg=black ctermbg=lightgray
-"highlight DiffDelete cterm=bold ctermfg=black ctermbg=darkred
-
-" Underline the cursor line
-"highlight CursorLine cterm=underline
+" From morhetz/gruvbox
+silent! colorscheme gruvbox
 
 " Extra white space
 highlight OverLength      ctermbg=red
@@ -156,7 +149,7 @@ let g:indent_guides_guide_size = 1
 
 " Air-line
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'badwolf'
+let g:airline_theme = 'gruvbox'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#show_buffers = 0
 
