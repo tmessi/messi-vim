@@ -1,4 +1,3 @@
-vim-fax
-=======
+# messi-vim
 
 vim configs
