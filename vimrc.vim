@@ -18,6 +18,8 @@ set termguicolors
 set fillchars+=vert:\▏
 
 " From morhetz/gruvbox
+let g:gruvbox_contrast_dark = 'hard'
+let g:gruvbox_guisp_fallback = "bg"
 silent! colorscheme gruvbox
 
 " Extra white space
@@ -98,6 +100,9 @@ let g:SuperTabDefaultCompletionType = "context"
 
 " NERDTree
 let g:NERDTreeQuitOnOpen=1
+
+" pgsql
+let g:sql_type_default = 'pgsql'
 
 " Fugitive
 nnoremap <leader>gs :Gstatus<CR>
