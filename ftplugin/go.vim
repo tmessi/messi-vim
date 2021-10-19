@@ -19,4 +19,4 @@ nmap <Leader>e <Plug>(go-rename)
 let g:syntastic_go_checkers = ['go', 'golangci_lint']
 let g:syntastic_go_golangci_lint_args='--config ~/.golangci.yml'
 
-let g:go_fmt_command = "goimports"
+let g:go_fmt_command = "gofumpt"
