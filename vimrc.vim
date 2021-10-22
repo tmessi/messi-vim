@@ -224,6 +224,10 @@ endfunction
 autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
+" fzf
+let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+let g:fzf_layout = { 'down': '40%' }
+
 "------------------------------------------------
 " Other settings
 "------------------------------------------------
