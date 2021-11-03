@@ -105,17 +105,16 @@ let g:NERDTreeQuitOnOpen=1
 let g:sql_type_default = 'pgsql'
 
 " Fugitive
-nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>g :Git<CR>
 nnoremap <leader>ga :Git add %:p<CR><CR>
-nnoremap <leader>gc :Gcommit -v -q<CR>
-nnoremap <leader>gt :Gcommit -v -q %:p<CR>
-nnoremap <leader>gd :Gdiff<CR>
+nnoremap <leader>gc :Git commit -v -q<CR>
+nnoremap <leader>gt :Git commit -v -q %:p<CR>
+nnoremap <leader>gd :Gvdiffsplit<CR>
 nnoremap <leader>ge :Gedit<CR>
 nnoremap <leader>gr :Gread<CR>
 nnoremap <leader>gw :Gwrite<CR><CR>
 nnoremap <leader>gl :silent! Glog<CR>:bot copen<CR>
-nnoremap <leader>gp :Ggrep<Space>
-nnoremap <leader>gm :Gmove<Space>
+nnoremap <leader>gm :GMove<Space>
 nnoremap <leader>gb :Git branch<Space>
 nnoremap <leader>go :Git checkout<Space>
 
@@ -225,6 +224,11 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " fzf
+nnoremap <C-P> :FZF<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>a :Ag<CR>
+nnoremap <leader>gp :GFiles<CR>
+nnoremap <leader>gs :GFiles?<CR>
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
 let g:fzf_layout = { 'down': '40%' }
 
@@ -310,7 +314,6 @@ map <F11> :set spell! spell?<CR>
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 
 nnoremap <leader>m :TagbarOpenAutoClose<CR>
-nmap <leader>a :Ack! <cword><CR>
 noremap <leader>f :NERDTreeFind<CR>
 noremap <leader>n :lnext<CR>
 noremap <leader>p :lprevious<CR>
