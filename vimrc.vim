@@ -227,6 +227,10 @@ autocmd! User GoyoLeave nested call <SID>goyo_leave()
 nnoremap <C-P> :FZF<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>a :Ag<CR>
+vnoremap <leader>a :call fzf#vim#ag(@*)<CR>
+nnoremap <leader>r :Rg<CR>
+nmap <C-]> <Plug>(fzf_tags)
+noreabbrev <expr> ts getcmdtype() == ":" && getcmdline() == 'ts' ? 'FZFTselect' : 'ts'
 nnoremap <leader>gp :GFiles<CR>
 nnoremap <leader>gs :GFiles?<CR>
 let g:fzf_preview_window = ['right:50%', 'ctrl-/']
