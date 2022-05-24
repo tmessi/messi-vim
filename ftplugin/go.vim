@@ -29,4 +29,9 @@ autocmd BufWritePost *_test.go :GoTestCompile
 " force build, fixes gopls issues
 noremap <leader><leader>p :GoBuildTags ''<cr>
 
+" use better fallback completion
+call SuperTabSetDefaultCompletionType("<c-x><c-o>")
+" close preview
+autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
+
 let tlist_go_settings = 'go;p:packages;t:types;c:constants;v:variables;i:interfaces;s:structs;f:functions'
