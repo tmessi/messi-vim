@@ -224,7 +224,7 @@ autocmd! User GoyoEnter nested call <SID>goyo_enter()
 autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " fzf
-nnoremap <C-P> :FZF<CR>
+nnoremap <C-P> :Files<CR>
 nnoremap <leader>b :Buffers<CR>
 nnoremap <leader>a :Ag<CR>
 vnoremap <leader>a :call fzf#vim#ag(@*)<CR>
