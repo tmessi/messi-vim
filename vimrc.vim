@@ -4,7 +4,15 @@ set encoding=utf-8
 "------------------------------------------------
 " Color settings
 "------------------------------------------------
-set background=dark
+function! ChangeBackground()
+    if system("dump_xsettings") =~ 'dark'
+        set background=dark
+    else
+        set background=light
+    endif
+endfunction
+
+call ChangeBackground()
 
 " Needed to so termguicolors works when $TERM is not xterm.
 " see:
