@@ -94,6 +94,8 @@ set backup
 set undofile
 set writebackup
 
+" Open files from quickfix into tabs
+set switchbuf+=usetab,newtab
 
 "------------------------------------------------
 " Plugin settings
