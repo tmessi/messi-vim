@@ -34,3 +34,11 @@ call SuperTabSetDefaultCompletionType("<c-x><c-o>")
 autocmd InsertLeave * if pumvisible() == 0 | pclose | endif
 
 let tlist_go_settings = 'go;p:packages;t:types;c:constants;v:variables;i:interfaces;s:structs;f:functions'
+
+let g:golang_onwrite = 0
+" Build/Test on save.
+augroup auto_go
+    autocmd!
+    autocmd BufWritePost *.go call go#cmd#Build(1)
+    autocmd BufWritePost *_test.go :GoTestCompile
+augroup end
