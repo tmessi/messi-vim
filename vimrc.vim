@@ -145,6 +145,7 @@ let g:gundo_right = 1
 let g:gundo_help = 0
 let g:gundo_width = 25
 let g:gundo_preview_height = 10
+let g:gundo_prefer_python3 = 1
 
 " Eclim settings
 let g:EclimProjectTreeAutoOpen = 0
