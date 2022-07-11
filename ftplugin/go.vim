@@ -23,9 +23,6 @@ let g:go_fmt_command = "gofumpt"
 
 set colorcolumn=80
 
-" compile tests on save to detect test compilation errors
-autocmd BufWritePost *_test.go :GoTestCompile
-
 " force build, fixes gopls issues
 noremap <leader><leader>p :GoBuildTags ''<cr>
 
