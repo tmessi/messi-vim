@@ -1,6 +1,7 @@
 " Run go cmd on current file
 nmap <leader>r <Plug>(go-run)
 nmap <leader>t <Plug>(go-test)
+nmap <leader>tf <Plug>(go-test-func)
 nmap <leader>c <Plug>(go-coverage)
 
 " Open definition
@@ -40,5 +41,5 @@ let g:golang_onwrite = 0
 augroup auto_go
     autocmd!
     autocmd BufWritePost *.go call go#cmd#Build(1)
-    autocmd BufWritePost *_test.go :GoTestCompile
 augroup end
+
