@@ -40,3 +40,9 @@ augroup auto_go
     autocmd BufWritePost *.go call go#cmd#Build(1)
 augroup end
 
+nmap <leader>df :DlvTestCurrent<CR>
+nmap <leader>db :DlvToggleBreakpoint<CR>
+
+let g:go_list_height = 40
+
+set updatetime=100
