@@ -86,6 +86,9 @@ set wildignore+=*.pyc         " Ignore python compiled files
 set wildignore+=*.class       " Ignore java compiled files
 set wildignore+=*.swp         " Ignore vim backups
 
+" Don't insert two spaces after punctuation when joining lines.
+set nojoinspaces
+
 " Backup/Undo settings
 execute "set directory=~/.vim/swap//"
 execute "set backupdir=~/.vim/backup//"
